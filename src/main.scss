@@ -1,4 +1,62 @@
-h1 {
-  color: rebeccapurple;
-  background-color: red;
+// reset
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+// utilities & variables
+
+// landing section
+
+.menu-btn {
+  color: gray;
+  height: 2rem;
+  width: 2rem;
+}
+
+// projects section
+
+// about section
+
+// contact section
+
+@media (min-width: 640px) {
+  // utilities
+  // landing section
+  // projects section
+  // about section
+  // contact section
+}
+
+@media (min-width: 768px) {
+  // utilities
+  // landing section
+  // projects section
+  // about section
+  // contact section
+}
+
+@media (min-width: 1024px) {
+  // utilities
+  // landing section
+  // projects section
+  // about section
+  // contact section
+}
+
+@media (min-width: 1280px) {
+  // utilities
+  // landing section
+  // projects section
+  // about section
+  // contact section
+}
+
+@media (min-width: 1536px) {
+  // utilities
+  // landing section
+  // projects section
+  // about section
+  // contact section
 }
