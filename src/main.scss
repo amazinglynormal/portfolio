@@ -7,12 +7,131 @@
 
 // utilities & variables
 
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
 // landing section
 
-.menu-btn {
-  color: gray;
-  height: 2rem;
-  width: 2rem;
+#home {
+  .navbar {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: solid 1px lightgrey;
+
+    .name {
+      .mobile-name {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .desktop-name {
+        display: none;
+      }
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .mobile {
+      .menu-header {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
+        .close-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 2rem;
+          width: 2rem;
+          background-color: transparent;
+          border: transparent;
+          border-radius: 3px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: lightgray;
+          }
+
+          .close-svg {
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+        }
+      }
+
+      .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: transparent;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lightgray;
+        }
+
+        .menu-svg {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      }
+
+      .mobile-menu {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        height: auto;
+        background-color: turquoise;
+        border-radius: 3px;
+
+        .menu-item {
+          height: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          &:hover {
+            background-color: white;
+          }
+
+          .nav-link {
+            text-decoration: none;
+            margin: 0 0.8rem;
+            color: black;
+
+            .link-num {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // projects section
@@ -32,6 +151,43 @@
 @media (min-width: 768px) {
   // utilities
   // landing section
+
+  #home {
+    .navbar {
+      .name {
+        .mobile-name {
+          display: none;
+        }
+
+        .desktop-name {
+          display: block;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+      }
+
+      .nav-links {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .nav-link {
+          text-decoration: none;
+          margin: 0 0.8rem;
+          color: black;
+
+          .link-num {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .mobile {
+        display: none;
+      }
+    }
+  }
   // projects section
   // about section
   // contact section
