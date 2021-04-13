@@ -19,8 +19,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
         test: /\.m?js$/,
@@ -32,16 +32,12 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "assest/resource",
-      },
     ],
   },
   devServer: {
-    contentBase: "./src",
+    contentBase: path.resolve(__dirname, "dist"),
+    open: true,
     watchContentBase: true,
     port: 8080,
-    hot: true,
   },
 };

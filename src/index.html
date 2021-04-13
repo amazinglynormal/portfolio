@@ -8,103 +8,24 @@
   </head>
   <body>
     <header id="home">
-      <div class="full-width">
-        <div class="navbar container">
-          <div class="name">
-            <p class="desktop-name">Stephen Brady</p>
-            <p class="mobile-name">SB</p>
-          </div>
-          <nav class="nav-links">
-            <a href="#home" class="nav-link"
-              ><span class="link-num">01.</span> Home</a
-            >
-            <a href="#projects" class="nav-link"
-              ><span class="link-num">02.</span> Projects</a
-            >
-            <a href="#about" class="nav-link"
-              ><span class="link-num">03.</span> About</a
-            >
-            <a href="#contact" class="nav-link"
-              ><span class="link-num">04.</span> Contact</a
-            >
-          </nav>
-          <div class="mobile">
-            <button type="menu" class="menu-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                class="menu-svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-            <div class="mobile-menu shadow hidden">
-              <div class="menu-header">
-                <button type="button" class="close-btn">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    class="close-svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <nav>
-                <div class="menu-item">
-                  <a href="#home" class="nav-link"
-                    ><span class="link-num">01.</span> Home</a
-                  >
-                </div>
-                <div class="menu-item">
-                  <a href="#projects" class="nav-link"
-                    ><span class="link-num">02.</span> Projects</a
-                  >
-                </div>
-                <div class="menu-item">
-                  <a href="#about" class="nav-link"
-                    ><span class="link-num">03.</span> About</a
-                  >
-                </div>
-                <div class="menu-item">
-                  <a href="#contact" class="nav-link"
-                    ><span class="link-num">04.</span> Contact</a
-                  >
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="intro">
-        <div class="intro-pic shadow">
-          <img
-            src="./picture1.jpg"
-            alt="Picture of Stephen"
-            class="intro-picture"
-          />
-        </div>
-        <h1 class="intro-heading">Hi! I'm Stephen Brady.</h1>
-        <p class="intro-subheading">
-          I'm a software developer from Dublin, Ireland.
-        </p>
-        <a href="#projects" class="cta-btn shadow">View Projects</a>
-      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <main></main>
+    <section id="projects"></section>
+    <section id="about"></section>
+    <section id="contact"></section>
+    <footer>
+      <p>
+        Built by Stephen Brady. MIT License. See
+        <a href="https://github.com/amazinglynormal/portfolio">repo</a> for
+        code.
+      </p>
+    </footer>
   </body>
 </html>
