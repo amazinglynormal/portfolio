@@ -2,11 +2,7 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      backgroundImage: (theme) => ({
-        portrait: "url('/src/assets/picture.jpg')",
-      }),
-    },
+    extend: {},
   },
   variants: {
     extend: {},
