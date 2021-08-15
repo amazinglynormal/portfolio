@@ -3,14 +3,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
+const isDevelopment = process.env.NODE_ENV === "development";
+
 module.exports = {
-  mode: "development",
+  mode: isDevelopment ? "development" : "production",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
-  devtool: "eval-source-map",
+  devtool: isDevelopment ? "eval-source-map" : "source-map",
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: "main.css" }),
@@ -31,6 +33,10 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
