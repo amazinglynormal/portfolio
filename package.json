@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js --node-env production"
   },
   "repository": {
     "type": "git",
