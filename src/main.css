@@ -1,0 +1,44 @@
+/* reset */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* utils */
+
+#home,
+#projects,
+#about,
+#contact,
+#footer {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* footer */
+
+#footer {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #d1d5db;
+}
+
+.footer-text {
+  color: #818892;
+}
+
+.footer-link {
+  color: #064e3b;
+}
+
+.footer-link:hover {
+  color: #047857;
+}
