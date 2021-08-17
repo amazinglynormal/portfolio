@@ -21,6 +21,60 @@ body {
   margin: 0 auto;
 }
 
+.shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* header */
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.brand-container {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.brand-full-name {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links-list-item {
+  margin: 0 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #818892;
+}
+
+.nav-link:hover {
+  color: #064e3b;
+}
+
 /* footer */
 
 #footer {
