@@ -41,9 +41,8 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist"),
+    watchFiles: ["src/**/*"],
     open: true,
-    watchContentBase: true,
     port: 8080,
   },
 };
