@@ -14,9 +14,9 @@ module.exports = {
   },
   devtool: isDevelopment ? "eval-source-map" : "source-map",
   plugins: [
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: "main.css" }),
-    new HtmlWebpackPlugin({ template: "./src/index.html" }),
   ],
   module: {
     rules: [
