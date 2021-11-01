@@ -7,6 +7,141 @@
     <title>Stephen Brady | Software Developer</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <header id="home" class="w-full">
+      <div
+        class="
+          h-24
+          flex
+          items-center
+          justify-between
+          max-w-5xl
+          w-full
+          mx-auto
+          border-b-2 border-gray-200
+        "
+      >
+        <div class="px-4">
+          <a href="#home" class="text-5xl text-green-600 font-bold">SB</a>
+        </div>
+        <nav class="hidden md:block">
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#home"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blog"
+                class="text-base font-medium text-gray-500 hover:text-gray-900"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="hidden px-4 md:block">
+          <button
+            class="
+              whitespace-nowrap
+              inline-flex
+              items-center
+              justify-center
+              px-4
+              py-2
+              border border-transparent
+              rounded-md
+              shadow-sm
+              text-base
+              font-medium
+              text-white
+              bg-green-600
+              hover:bg-green-700
+            "
+          >
+            Download CV
+          </button>
+        </div>
+        <div class="px-4 flex items-center md:hidden">
+          <button type="button" id="open-menu-btn" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!-- Heroicon name: outline/menu -->
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobile-menu" class="hidden absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <a href="#home" class="text-3xl text-green-600 font-bold">SB</a>
+            </div>
+            <div class="-mr-2">
+              <button type="button" id="close-menu-btn" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Close menu</span>
+                <!-- Heroicon name: outline/x -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="px-2 pt-2 pb-3">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                </li>
+              <li>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projects</a>
+                
+              </li>  
+              <li>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+
+              </li>  
+              <li>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+
+              </li>  
+              <li>
+                <a href="#blog" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Blog</a>
+              </li>  
+              </ul>
+            </nav>
+          </div>
+          <button class="block w-full px-5 py-3 text-center font-medium text-green-600 bg-gray-50 hover:bg-gray-100">
+            Download CV
+          </button>
+        </div>
+      </div>
+    </div>
+    </header>
   </body>
 </html>
