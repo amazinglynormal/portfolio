@@ -3,6 +3,9 @@ module.exports = {
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        "abstract-pattern": "url('/assets/abstract-timekeeper.svg')",
+      },
       colors: {
         black: {
           base: "#0B0C10",
