@@ -40,6 +40,9 @@ module.exports = {
       },
     ],
   },
+  performance: {
+    hints: isDevelopment ? false : "error",
+  },
   devServer: {
     watchFiles: ["src/**/*"],
     open: true,

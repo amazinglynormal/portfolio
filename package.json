@@ -5,7 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve",
+    "dev": "webpack serve --node-env development",
     "build": "webpack --config webpack.config.js --node-env production"
   },
   "repository": {
