@@ -11,3 +11,10 @@ openMenuButton.addEventListener("click", () => {
 closeMenuButton.addEventListener("click", () => {
   mobileMenu.classList.add("hidden");
 });
+
+mobileMenu.addEventListener("click", (event) => {
+  if (event.target !== event.currentTarget) {
+    return;
+  }
+  mobileMenu.classList.add("hidden");
+});
