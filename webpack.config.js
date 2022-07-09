@@ -11,18 +11,19 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    clean: true,
   },
   devtool: isDevelopment ? "eval-source-map" : "source-map",
   plugins: [
     new HtmlWebpackPlugin({ template: "./src/index.html" }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: "main.css" }),
+    new MiniCssExtractPlugin({ filename: "styles.css" }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.m?js$/,
@@ -33,10 +34,6 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
       },
     ],
   },
