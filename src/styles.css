@@ -1,5 +1,6 @@
 :root {
   --slate: #1e293b;
+  --slate-secondary: #475569;
   --light-slate: #cbd5e1;
   --dark-slate: #0f172a;
   --light-emerald: #dcfce7;
@@ -50,7 +51,7 @@ a {
 }
 
 .nav-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -77,6 +78,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--slate-secondary);
 }
 
 .nav-link-item a:hover {
@@ -121,6 +123,7 @@ a {
   height: calc(100vh - 6rem);
   display: flex;
   flex-direction: column;
+  max-height: 768px;
 }
 
 .pic-container {
@@ -146,9 +149,11 @@ a {
   text-align: center;
 }
 
-.hero-copy p {
+.hero-copy p,
+#skills p {
   margin: 1rem 0 2rem 0;
   letter-spacing: 0.08rem;
+  color: var(--slate-secondary);
 }
 
 .hero-links {
@@ -178,6 +183,25 @@ a {
   padding: 0.4rem 2rem;
 }
 
+section {
+  margin: 0 2rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.skills-list {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  row-gap: 1rem;
+}
+
+.skills-list-item {
+  list-style-type: disc;
+}
+
 @media (min-width: 450px) {
   .hero {
     margin: 1rem auto;
@@ -195,7 +219,7 @@ a {
   }
 
   .nav-title {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 
   .github-link span {
@@ -207,6 +231,10 @@ a {
   .pic {
     width: 160px;
     height: 160px;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(3, 33%);
   }
 }
 
@@ -236,5 +264,9 @@ a {
   .hero-social-links a {
     margin: 0 1.7rem;
     padding: 0.5rem 3rem;
+  }
+
+  h2 {
+    text-align: left;
   }
 }
