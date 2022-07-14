@@ -125,7 +125,7 @@ a {
 
 .pic-container {
   display: flex;
-  margin: 2rem 2rem 1rem;
+  margin: 2rem auto 1rem;
 }
 
 .pic {
@@ -139,7 +139,11 @@ a {
 .hero {
   height: 100%;
   width: 300px;
-  margin: 1rem 2rem;
+  margin: 1rem auto;
+}
+
+.hero-copy {
+  text-align: center;
 }
 
 .hero-copy p {
@@ -175,6 +179,13 @@ a {
 }
 
 @media (min-width: 450px) {
+  .hero {
+    margin: 1rem auto;
+  }
+
+  .pic-container {
+    margin: 2rem auto;
+  }
 }
 
 @media (min-width: 768px) {
@@ -188,7 +199,38 @@ a {
     align-items: center;
     margin: 0.2rem;
   }
+
+  .pic {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+    margin-top: 4rem;
+  }
+
+  .pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero {
+    width: 32rem;
+  }
+
+  .hero-copy {
+    text-align: left;
+  }
+
+  .hero-social-links {
+    justify-content: center;
+  }
+
+  .hero-social-links a {
+    margin: 0 1.7rem;
+    padding: 0.5rem 3rem;
+  }
 }
