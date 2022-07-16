@@ -133,7 +133,9 @@ a {
 .hero-copy p,
 #skills p,
 .skills-list-item,
-#projects p {
+#projects p,
+#contact p,
+footer div {
   letter-spacing: 0.08rem;
   color: var(--slate-secondary);
 }
@@ -152,7 +154,8 @@ section {
 }
 
 #skills h2,
-#projects h2 {
+#projects h2,
+#contact h2 {
   text-decoration: underline;
   margin-bottom: 1rem;
 }
@@ -191,6 +194,22 @@ section {
 }
 
 .hover {
+  text-decoration: underline;
+}
+
+footer {
+  border-top: 1px solid var(--light-slate);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer div {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer a {
   text-decoration: underline;
 }
 
