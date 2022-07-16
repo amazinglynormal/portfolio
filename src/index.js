@@ -3,10 +3,10 @@ const projectArticles = document.querySelectorAll(".project-link");
 
 for (i = 0; i < projectArticles.length; i++) {
   const element = projectLinkTexts[i];
-  projectArticles[i].addEventListener("mouseenter", () => {
+  projectArticles[i].addEventListener("pointerenter", () => {
     element.classList.add("hover");
   });
-  projectArticles[i].addEventListener("mouseleave", () => {
+  projectArticles[i].addEventListener("pointerleave", () => {
     element.classList.remove("hover");
   });
 }
