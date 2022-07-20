@@ -3,7 +3,8 @@
   --slate-secondary: #64748b;
   --light-slate: #cbd5e1;
   --dark-slate: #0f172a;
-  --light-emerald: #dcfce7;
+  --emerald: #6ee7b7;
+  --light-emerald: #a7f3d0;
 }
 
 *,
@@ -35,31 +36,35 @@ a {
 
 .navbar {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
-  position: sticky;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
+
   max-width: 1024px;
   margin: 0 auto;
   background-color: white;
   height: 6rem;
-  position: fixed;
   z-index: 20;
 }
 
-.nav-links-list {
+.navbar nav {
+  width: 100%;
+}
+
+.nav-links-list,
+.nav-links-list div {
   display: flex;
+  justify-content: center;
 }
 
 .nav-link-item {
   margin: 0 0.3rem;
 }
 
-.nav-link-item:last-child {
+.nav-links-list div:last-child li {
   margin: 0 0.3rem;
   padding: 0.5rem;
 }
@@ -67,6 +72,7 @@ a {
 .nav-link-item a {
   width: 100%;
   height: 100%;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,7 +155,7 @@ footer div {
   width: 100%;
   text-align: center;
   font-weight: bold;
-  background-color: #10b981;
+  background-color: var(--emerald);
 }
 
 section {
@@ -203,7 +209,7 @@ section {
 }
 
 .contact-information-container {
-  background: linear-gradient(120deg, #a7f3d0, var(--light-emerald));
+  background: linear-gradient(120deg, var(--emerald), #d1fae5);
   color: white;
   padding: 0.75rem;
   border-top-left-radius: 0.75rem;
@@ -254,8 +260,8 @@ section {
 
 .contact-form-input:focus {
   outline: none;
-  border-color: #10b981;
-  box-shadow: 0 0 10px #10b981;
+  border-color: var(--emerald);
+  box-shadow: 0 0 10px var(--emerald);
   color: var(--slate);
 }
 
@@ -285,34 +291,22 @@ footer a {
 }
 
 @media (min-width: 450px) {
-  .hero {
-    margin: 1rem auto;
-  }
-
-  .pic-container {
-    margin: 2rem auto;
-  }
-}
-
-@media (min-width: 600px) {
-  .header {
-    flex-direction: row;
-  }
-
-  .hero {
-    width: auto;
-    margin-right: 2rem;
+  .nav-link-item a {
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 768px) {
-  .navbar {
-    flex-direction: row;
+  .navbar nav {
+    margin: 0 2rem;
+  }
+
+  .nav-links-list {
     justify-content: space-between;
   }
 
-  .nav-title {
-    font-size: 1.9rem;
+  .nav-link-item {
+    margin-right: 1rem;
   }
 
   .github-link span {
@@ -321,9 +315,22 @@ footer a {
     margin: 0.2rem;
   }
 
+  #hero {
+    display: flex;
+    margin-top: 8rem;
+  }
+
+  .pic-container {
+    margin-right: 2rem;
+  }
+
   .pic {
-    width: 160px;
-    height: 160px;
+    height: 12.2rem;
+    width: 10rem;
+  }
+
+  .hero-copy {
+    margin-right: 2rem;
   }
 
   .skills-list {
@@ -332,18 +339,9 @@ footer a {
 }
 
 @media (min-width: 1024px) {
-  .header {
-    flex-direction: row;
-    margin-top: 4rem;
-  }
-
   .pic {
     width: 200px;
     height: 200px;
-  }
-
-  .hero {
-    width: 32rem;
   }
 
   .hero-copy {
