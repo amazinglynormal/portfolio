@@ -21,7 +21,8 @@ header,
 main,
 footer {
   max-width: 1024px;
-  margin: 0 2rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 a {
@@ -42,7 +43,6 @@ a {
   top: 0px;
   left: 0px;
   right: 0px;
-
   max-width: 1024px;
   margin: 0 auto;
   background-color: white;
@@ -242,6 +242,10 @@ section {
   align-items: center;
 }
 
+.contact-form-container {
+  padding: 0.75rem;
+}
+
 .label-input-container {
   display: flex;
   flex-direction: column;
@@ -297,10 +301,6 @@ footer a {
 }
 
 @media (min-width: 768px) {
-  .navbar nav {
-    margin: 0 2rem;
-  }
-
   .nav-links-list {
     justify-content: space-between;
   }
@@ -350,5 +350,18 @@ footer a {
 
   h2 {
     text-align: left;
+  }
+
+  #contact > div {
+    display: flex;
+  }
+
+  .contact-information-container {
+    width: 35%;
+    margin-right: 1rem;
+  }
+
+  .contact-form-container {
+    width: 65%;
   }
 }
