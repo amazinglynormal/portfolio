@@ -1,3 +1,5 @@
+import "./styles.css"
+
 const projectLinkTexts = document.querySelectorAll(".project-link-text");
 const projectArticles = document.querySelectorAll(".project-link");
 

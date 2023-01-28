@@ -15,7 +15,10 @@ module.exports = {
   },
   devtool: isDevelopment ? "eval-source-map" : "source-map",
   plugins: [
-    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: "styles.css" }),
   ],
@@ -23,7 +26,10 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [
+          isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+        ],
       },
       {
         test: /\.m?js$/,
@@ -34,6 +40,10 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },
