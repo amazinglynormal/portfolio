@@ -23,3 +23,13 @@ navMenuBtn.addEventListener("click", toggleMobileNavMenu);
 
 const closeMobileNavMenuBtn = document.querySelector(".close-menu-btn");
 closeMobileNavMenuBtn.addEventListener("click", toggleMobileNavMenu);
+
+const mobileNavItems = document.querySelectorAll(
+  ".mobile-nav .nav-link-item a"
+);
+console.log(mobileNavItems);
+
+mobileNavItems.forEach((item) => {
+  item.addEventListener("click", toggleMobileNavMenu);
+  console.log(item);
+});
