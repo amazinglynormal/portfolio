@@ -1,6 +1,6 @@
 :root {
   --slate: #1e293b;
-  --slate-secondary: #64748b;
+  --slate-secondary: #556376;
   --light-slate: #cbd5e1;
   --dark-slate: #0f172a;
   --emerald: #6ee7b7;
@@ -73,7 +73,9 @@ button {
 .cta-button,
 .nav-menu-btn,
 .close-menu-btn,
-.github-link {
+.github-link,
+.project-card,
+.project-card-link-container a {
   border-radius: 10px;
   border-color: #c8d3e4;
   box-shadow: 1px 3px 6px #a2a4aa, -3px -3px 6px #fff;
@@ -174,33 +176,46 @@ a.github-link {
 }
 
 #hero {
-  margin-top: 6rem;
+  margin-top: 10rem;
+  height: calc(100vh - 6rem);
+}
+
+.pic-container {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pic {
   filter: grayscale(100%);
   display: block;
-  width: 5rem;
-  height: 5rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 0.75rem;
-}
-
-.pic-container {
-  margin-bottom: 2rem;
 }
 
 .hero-copy h1,
 .hero-copy p {
-  margin-bottom: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+.hero-copy h1 {
+  text-align: center;
 }
 
 .hero-copy p,
-#skills p,
-.skills-list-item,
-#projects p,
+#skills > p,
+#projects > p,
 #contact p,
 footer div {
-  letter-spacing: 0.08rem;
+  /* letter-spacing: 1rem; */
+  color: var(--slate-secondary);
+  font-size: 1.2rem;
+}
+
+.skills-list-item,
+.project-description {
   color: var(--slate-secondary);
 }
 
@@ -220,8 +235,8 @@ section {
 #skills h2,
 #projects h2,
 #contact h2 {
-  text-decoration: underline;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .skills-list {
@@ -235,27 +250,47 @@ section {
   list-style-type: disc;
 }
 
+#skills > p,
 #projects > p,
 #contact > p {
   margin-bottom: 2rem;
 }
 
-.project-link {
+.project-card {
   display: block;
   margin-bottom: 3rem;
+  border-radius: 0.75rem;
+  height: 100%;
 }
 
 .project-screenshot-container {
   width: 100%;
   height: 300px;
-  background-color: aquamarine;
-  border-radius: 0.75rem;
+  background-color: rgb(225, 233, 230);
   margin-bottom: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .project-title,
 .project-description {
   margin-bottom: 0.75rem;
+  padding: 0 1rem;
+}
+
+.project-card-link-container {
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project-card-link-container a {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
 }
 
 .contact-information-item a:hover,
