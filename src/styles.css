@@ -15,6 +15,7 @@ body {
   list-style: none;
   font-family: "Poppins", sans-serif;
   color: var(--slate);
+  background-color: #f6f7fc;
 }
 
 header,
@@ -25,96 +26,150 @@ footer {
   padding: 0 2rem;
 }
 
-a {
+a,
+.nav-link-item a.github-link,
+.cta-button,
+.contact-form-submit-button {
   text-decoration: none;
 }
 
-.nav-link-item a.github-link,
-.cta-button {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
-    0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.icon-btn {
+  font-size: 0;
+}
+
+.svg-icon {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.3rem;
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   max-width: 1024px;
   margin: 0 auto;
-  background-color: white;
   height: 6rem;
-  z-index: 20;
+  z-index: 1;
+  background-color: #f6f7fc;
+}
+
+.menu-btn-container,
+.close-menu-btn {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-item,
+.cta-button,
+.nav-menu-btn,
+.close-menu-btn,
+.github-link {
+  border-radius: 10px;
+  border-color: #c8d3e4;
+  box-shadow: 1px 3px 6px #a2a4aa, -3px -3px 6px #fff;
+  transition: all 0.2s ease;
+}
+
+.nav-link-item:hover {
+  color: #44476a;
+  text-decoration: none;
 }
 
 .navbar nav {
   width: 100%;
 }
 
-.nav-links-list,
-.nav-links-list div {
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  z-index: 2;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.nav-link-item {
-  margin: 0 0.3rem;
+.mobile-nav.hide {
+  opacity: 0;
+  left: 100%;
 }
 
-.nav-links-list div:last-child li {
-  margin: 0 0.3rem;
-  padding: 0.5rem;
+.mobile-nav.show {
+  right: 0%;
+  opacity: 1;
 }
 
-.nav-link-item a {
+.mobile-nav nav {
+  background-color: transparent;
+}
+
+.mobile-nav nav ul {
+  background-color: transparent;
+}
+
+.close-menu-btn-container {
+  background-color: transparent;
+  margin-bottom: 8rem;
+}
+
+.close-menu-btn {
+  background-color: transparent;
+}
+
+.close-menu-svg {
+  background-color: transparent;
+  color: white;
+}
+
+.mobile-nav .nav-link-item {
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+
+.mobile-nav .nav-link-item a,
+a.github-link {
   width: 100%;
   height: 100%;
-  font-size: 0.8rem;
+  padding: 0 1rem;
+  border-radius: inherit;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--slate-secondary);
+  color: var(--slate);
 }
 
 .nav-link-item a:hover {
   color: var(--dark-slate);
-  text-decoration: underline;
 }
 
-.nav-link-item a.github-link,
-.cta-button,
-.contact-form-submit-button {
-  border: 1px solid transparent;
-  border-top-color: var(--light-slate);
-  border-radius: 0.75rem;
-  text-decoration: none;
+div > a.github-link {
+  border-radius: 10px;
 }
 
-.nav-link-item a.github-link:hover,
-.cta-button:hover,
-.contact-form-submit-button:hover {
-  background-color: var(--light-emerald);
-}
-
-.nav-link-item a.github-link {
+a.github-link {
   padding: 0 1rem;
 }
 
 .github-link span {
   display: none;
-}
-
-.svg-icon {
-  height: 1.2rem;
-  width: 1.2rem;
-  margin: 0.3rem;
-}
-
-.svg-icon:hover {
-  color: var(--dark-slate);
 }
 
 #hero {
@@ -155,7 +210,6 @@ footer div {
   width: 100%;
   text-align: center;
   font-weight: bold;
-  background-color: var(--emerald);
 }
 
 section {
