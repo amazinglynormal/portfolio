@@ -77,7 +77,9 @@ button {
 .project-card,
 .project-card-link-container a,
 .contact-information-container,
-.contact-form-submit-button {
+.contact-form-submit-button,
+.clipboard-btn,
+.tooltip {
   border-radius: 10px;
   border-color: #c8d3e4;
   box-shadow: 1px 3px 6px #a2a4aa, -3px -3px 6px #fff;
@@ -93,6 +95,7 @@ button {
   width: 100%;
 }
 
+.tooltip.hide,
 .desktop-nav {
   display: none;
 }
@@ -121,26 +124,16 @@ button {
   opacity: 1;
 }
 
-.mobile-nav nav {
-  background-color: transparent;
-}
-
-.mobile-nav nav ul {
+.close-menu-btn,
+.mobile-nav nav ul,
+.mobile-nav nav,
+.close-menu-svg,
+.close-menu-btn-container {
   background-color: transparent;
 }
 
 .close-menu-btn-container {
-  background-color: transparent;
   margin-bottom: 8rem;
-}
-
-.close-menu-btn {
-  background-color: transparent;
-}
-
-.close-menu-svg {
-  background-color: transparent;
-  color: white;
 }
 
 .mobile-nav .nav-link-item {
@@ -211,7 +204,6 @@ a.github-link {
 #projects > p,
 #contact p,
 footer div {
-  /* letter-spacing: 1rem; */
   color: var(--slate-secondary);
   font-size: 1.2rem;
 }
@@ -329,6 +321,10 @@ section {
   align-items: center;
 }
 
+.email-text {
+  font-size: 0.9rem;
+}
+
 .svg-icon-small {
   height: 1.2rem;
   width: 1.2rem;
@@ -345,6 +341,31 @@ section {
   border-radius: 10px;
   padding: 0.5rem;
   box-shadow: inset 5px 5px 19px #d4d4d9, inset -10px -10px 19px #ffffff;
+}
+
+.clipboard-btn {
+  position: relative;
+  padding: 0.2rem;
+}
+
+.tooltip {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip.show {
+  position: absolute;
+  background-color: #f6f7fc;
+  color: var(--dark-slate);
+  padding: 0.5rem;
+  font-size: 0.5rem;
+  top: -20px;
+  right: 20px;
+  z-index: 20;
+}
+
+.clipped {
+  border: 2px solid var(--emerald);
 }
 
 .textarea {
