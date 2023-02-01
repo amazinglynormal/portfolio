@@ -75,7 +75,9 @@ button {
 .close-menu-btn,
 .github-link,
 .project-card,
-.project-card-link-container a {
+.project-card-link-container a,
+.contact-information-container,
+.contact-form-submit-button {
   border-radius: 10px;
   border-color: #c8d3e4;
   box-shadow: 1px 3px 6px #a2a4aa, -3px -3px 6px #fff;
@@ -293,31 +295,26 @@ section {
   font-weight: bold;
 }
 
-.contact-information-item a:hover,
-.hover {
-  text-decoration: underline;
-}
-
 .contact-information-container {
-  background: linear-gradient(120deg, var(--emerald), #d1fae5);
-  color: white;
-  padding: 0.75rem;
+  padding: 1rem;
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .contact-information-container h3,
 .contact-information-container p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-information-item a,
 .contact-information-item {
   display: flex;
+  align-items: center;
 }
 
 .contact-information-item {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.2rem;
 }
 
 .contact-information-icon {
@@ -332,8 +329,9 @@ section {
   align-items: center;
 }
 
-.contact-form-container {
-  padding: 0.75rem;
+.svg-icon-small {
+  height: 1.2rem;
+  width: 1.2rem;
 }
 
 .label-input-container {
@@ -343,9 +341,10 @@ section {
 }
 
 .contact-form-input {
-  border: 1px solid var(--light-slate);
-  border-radius: 0.75rem;
+  border: 1px solid #e9eaee;
+  border-radius: 10px;
   padding: 0.5rem;
+  box-shadow: inset 5px 5px 19px #d4d4d9, inset -10px -10px 19px #ffffff;
 }
 
 .textarea {
@@ -455,3 +454,8 @@ footer a {
     width: 65%;
   }
 }
+
+/* background-color: #6EE7B7;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg fill-opacity='0.88'%3E%3Ccircle fill='%236EE7B7' cx='50' cy='0' r='50'/%3E%3Cg fill='%236be9c3' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%236aeace' cx='50' cy='100' r='50'/%3E%3Cg fill='%236becd8' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%236fede1' cx='50' cy='200' r='50'/%3E%3Cg fill='%2375eee9' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%237ceef1' cx='50' cy='300' r='50'/%3E%3Cg fill='%2385eff7' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%2390effc' cx='50' cy='400' r='50'/%3E%3Cg fill='%239aefff' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a5f0ff' cx='50' cy='500' r='50'/%3E%3Cg fill='%23b0f0ff' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23bbf0ff' cx='50' cy='600' r='50'/%3E%3Cg fill='%23c5f0ff' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23cff1ff' cx='50' cy='700' r='50'/%3E%3Cg fill='%23d7f1ff' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23dff2ff' cx='50' cy='800' r='50'/%3E%3Cg fill='%23e7f3ff' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23edf4ff' cx='50' cy='900' r='50'/%3E%3Cg fill='%23f2f5fe' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23F6F7FC' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: contain; */
