@@ -404,21 +404,7 @@ footer a {
   text-decoration: underline;
 }
 
-@media (min-width: 450px) {
-  .nav-link-item a {
-    font-size: 1rem;
-  }
-}
-
 @media (min-width: 768px) {
-  .nav-links-list {
-    justify-content: space-between;
-  }
-
-  .nav-link-item {
-    margin-right: 1rem;
-  }
-
   .github-link span {
     display: inline-flex;
     align-items: center;
@@ -427,20 +413,29 @@ footer a {
 
   #hero {
     display: flex;
-    margin-top: 8rem;
+    flex-direction: column;
+    margin-top: 14rem;
   }
 
   .pic-container {
-    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
   }
 
-  .pic {
-    height: 12.2rem;
-    width: 10rem;
+  .pic-container .pic {
+    margin-right: 3rem;
   }
 
-  .hero-copy {
-    margin-right: 2rem;
+  .pic-container h1 {
+    font-size: 3rem;
+  }
+
+  .hero-copy h1 {
+    display: none;
+  }
+
+  .hero-copy p {
+    padding: 1rem;
   }
 
   .skills-list {
