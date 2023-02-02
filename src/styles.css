@@ -190,6 +190,10 @@ a.github-link {
   border-radius: 0.75rem;
 }
 
+.pic-container h1 {
+  display: none;
+}
+
 .hero-copy h1,
 .hero-copy p {
   margin-bottom: 3rem;
@@ -427,6 +431,7 @@ footer a {
   }
 
   .pic-container h1 {
+    display: block;
     font-size: 3rem;
   }
 
