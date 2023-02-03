@@ -46,6 +46,7 @@ button {
   height: 2rem;
   width: 2rem;
   margin: 0.3rem;
+  background-color: transparent;
 }
 
 .navbar {
@@ -60,7 +61,6 @@ button {
   margin: 0 auto;
   height: 6rem;
   z-index: 1;
-  background-color: #f6f7fc;
 }
 
 .menu-btn-container,
@@ -124,6 +124,8 @@ button {
   opacity: 1;
 }
 
+a.github-link,
+a.github-link span,
 .close-menu-btn,
 .mobile-nav nav ul,
 .mobile-nav nav,
@@ -331,6 +333,11 @@ section {
 .svg-icon-small {
   height: 1.2rem;
   width: 1.2rem;
+  background-color: transparent;
+}
+
+.svg-icon-small:hover {
+  cursor: pointer;
 }
 
 .label-input-container {
@@ -407,6 +414,19 @@ footer a {
   text-decoration: underline;
 }
 
+.nav-link-item,
+.github-link,
+.cta-button,
+.project-card-link,
+.contact-form-submit-button,
+.close-menu-btn {
+  background: linear-gradient(
+    to right,
+    var(--emerald) 0%,
+    var(--light-emerald) 100%
+  );
+}
+
 @media (min-width: 768px) {
   .github-link span {
     display: inline-flex;
@@ -465,11 +485,23 @@ footer a {
   }
 
   .nav-link-item a {
-    transition: background-color 2s ease;
+    transition: background-color 0.5s ease;
   }
 
-  .nav-link-item a:hover {
-    background-color: red;
+  .svg-icon-small:hover,
+  .nav-link-item a:hover,
+  .cta-button:hover,
+  .nav-menu-btn:hover,
+  .close-menu-btn:hover,
+  .github-link:hover,
+  .project-card-link-container a:hover,
+  .contact-form-submit-button:hover,
+  .clipboard-btn:hover {
+    background: linear-gradient(
+      to right,
+      var(--light-emerald) 0%,
+      var(--emerald) 100%
+    );
   }
 
   .pic {
